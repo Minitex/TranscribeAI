@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+myenv/
+.env
+
+# Jupyter Notebook files
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Python
+*.pyo
+*.pyd
+*.pyd
+
+# Environment variables
+API Keys/
+
+# Output File
+GeminiImageTranscription/TranscriptionOutputGemini
+GeminiImageTranscription/pending_image_paths_gemini.txt
+OptimizedImagesForOCR
+PreprocessPostprocess/optimized_image_path_for_ocr.txt
+GeminiImageTranscription/OcrDocumentContext
