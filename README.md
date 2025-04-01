@@ -75,18 +75,19 @@ Install the required packages:
 pip install -r requirements.txt
 ```
 
-### 4. Configure Environment Variables
+### 4. Set Up Environment Variables
 
-Create an `.env` from `.env.example` and update it with your actual API key. For example, run:
+1. Follow the instructions at [Gemini API Key Docs](https://ai.google.dev/gemini-api/docs/api-key) to obtain your Gemini API key.
 
-```bash
-cp .env.example .env
-```
-Then open the .env file and replace your-api-key with your real Google API key:
+2. Create a local environment file by copying the example:
+   ```bash
+   cp .env.example .env
+   ```
 
-```bash
-GOOGLE_API_KEY=your_actual_api_key_here
-```
+3. Open the newly created `.env` file and replace `your-api-key` with your actual Google API key:
+   ```bash
+   GOOGLE_API_KEY=your_actual_api_key_here
+   ```
 
 ### 5. Prepare Your Image and Context Files
 
@@ -112,7 +113,7 @@ python3 transcribe_document_main.py /path/to/input_images --new
 **Example Walkthrough:**
 
 1. **Source Images:**  
-   You have a folder `/Users/Minitex/Downloads/TestImages` containing 4 images.
+   You have a folder `/Users/Minitex/Downloads/TestImages` containing images that you want to transcribe.
 
 2. **Run the Pipeline:**  
    Execute the following command:
@@ -151,11 +152,6 @@ python3 transcribe_document_main.py /path/to/input_images --new
     - If you have an image named `invoice2022.png`, create a file named `invoice2022_context.txt` with context relevant to that invoice (e.g., "an invoice detailing services rendered in Q1 2022").
 
     When processing, TranscribeAI will first check for a global context file. If it exists, its content is applied to all images. Then, for each image, the script checks for an individual context file that matches the image’s basename. If one is found, its content is appended to the global context for that image—providing tailored transcription instructions for images that need additional context.
-
-
-## License
-
-MIT License
 
 ## Contributing
 
